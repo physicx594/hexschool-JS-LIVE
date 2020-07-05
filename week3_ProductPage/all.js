@@ -109,6 +109,7 @@ var app = new Vue({
             options: {
               currentNumber: 0,
               maxNumber: 0,
+              coupon: '可用優惠券',
             },
           };
           break;
