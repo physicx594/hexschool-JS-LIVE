@@ -1,0 +1,10 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  transition: 0.5s;
+}
+.box.fail {
+  transition: 0.5s;
+  background-color: red;
+}

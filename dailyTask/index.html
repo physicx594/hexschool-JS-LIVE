@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="all.css" />
+  </head>
+  <body>
+    <div id="app" class="container">
+      陷阱：
+      <button type="button" class="btn btn-danger" @click="trap">
+        點擊就會觸發的陷阱
+      </button>
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {},
+        methods: {
+          trap() {
+            alert("真心鎮的追捕人員踩到了陷阱");
+          },
+        },
+      });
+      axios.get('https://raw.githubusercontent.com/hexschool/js-training-task/master/api/BigFive.json')
+      .then((res)=>{
+        console.log(res)
+      });
+    </script>
+
+    <!-- <script type="module">
+      import "./0626.js";
+    </script> -->
+
+  </body>
+</html>
