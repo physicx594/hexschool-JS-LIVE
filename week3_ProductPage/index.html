@@ -56,6 +56,7 @@
             <td>{{item.options.currentNumber}} / {{item.options.maxNumber}}</td>
 
             <td @click="state('coupon', item)"><div class="box" :class="{open:item.options.coupon}"><div class="circle" :class="{open:item.options.coupon}"></div></div></td>
+            
             <td @click="state('enabled', item)" ><div class="box" :class="{open:item.is_enabled}"><div class="circle" :class="{open:item.is_enabled}"></div></div></td>
 
             <td>
@@ -123,11 +124,12 @@
                       <input type="number" id="price" class="form-control"  placeholder="請輸入售價" v-model="tempProduct.price">
                     </div>
                     <div class="form-group col">
-                      <label for="coupon" >優惠券</label>
+                      <label for="coupon" >可用優惠券</label>
+                      <!-- <input type="checkbox" id="coupon" v-model="tempProduct.options.coupon"> -->
                       <select class="custom-select" v-model="tempProduct.options.coupon">
-                        <option selected disabled>可用優惠券</option>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
+                        <option selected value="請選擇" disabled>請選擇</option>
+                        <option  value= true>Yes</option>
+                        <option  value= false>No</option>
                       </select>
                     </div>
                   </div>

@@ -109,7 +109,7 @@ var app = new Vue({
             options: {
               currentNumber: 0,
               maxNumber: 0,
-              coupon: '可用優惠券',
+              coupon: '請選擇',
             },
           };
           break;
@@ -126,11 +126,12 @@ var app = new Vue({
       if (this.tempProduct.id) {
         this.products.forEach((item, index) => {
           if (item.id === this.tempProduct.id)
-            this.products[index] = this.tempProduct;
+          this.products[index] = this.tempProduct;
         });
       } else {
         this.tempProduct.id = new Date().getTime();
         this.products.push(this.tempProduct);
+
       }
       $("#productModal").modal("hide");
       this.tempProduct = {
@@ -146,6 +147,7 @@ var app = new Vue({
       }
       $("#deleteModal").modal("hide");
     },
+    //開關
     state(type,stateItem){
       switch(type){
         case 'enabled':
@@ -165,6 +167,7 @@ var app = new Vue({
       }
     }
   },
+  // 排序
   computed: {
     sortData() {
       return this.products.sort((a, b) => {

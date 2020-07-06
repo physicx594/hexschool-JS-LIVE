@@ -25,6 +25,7 @@ tbody tr:hover {
     border-radius: 35px;
 
 }
+
 .box.open{
     box-sizing: border-box;
     width: 60px;

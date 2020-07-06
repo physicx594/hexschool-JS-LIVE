@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var person = {
+            name: '小明'
+        }
+
+        var person2 = JSON.parse(JSON.stringify(person))
+        person2.name = '小華'
+
+        console.log(person=== person2)
+    ;</script>
+</body>
+</html>
