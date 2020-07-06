@@ -12,7 +12,7 @@ var app = new Vue({
         origin_price: 21700,
         price: 8880,
         description: "健力三項",
-        content: "手把手帶你練習，三人及滿團",
+        content: "手把手帶你訓練，三人及滿團",
         is_enabled: true,
         imageUrl:
           "https://images.unsplash.com/photo-1582443242920-f6dd3b476827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
