@@ -33,11 +33,11 @@
             <th>分類</th>
             <th width="30%">產品名稱</th>
             <th class="click" @click="isReverse=!isReverse;sortType='origin_price'" >原價           
-              <span class="icon isReverse" :class="{inverse: isReverse}" v-if="sortType==='origin_price'">
+              <span class="icon isReverse" :class="{inverse: isReverse}" v-if="sortType ==='origin_price'||sortType ==''">
                 <i class="fas fa-angle-up text-white"></i>
             </span></th>
             <th class="click" @click="isReverse=!isReverse;sortType='price'" >售價           
-              <span class="icon isReverse" :class="{inverse: isReverse}" v-if="sortType==='price'">
+              <span class="icon isReverse" :class="{inverse: isReverse}" v-if="sortType==='price'||sortType ==''">
                 <i class="fas fa-angle-up text-white"></i>
             </span></th>
             <th>人數</th>
