@@ -97,8 +97,6 @@ var app = new Vue({
       },
     ],
     tempProduct: {
-      options: {
-      },
     },
   },
   methods: {
@@ -132,7 +130,6 @@ var app = new Vue({
       } else {
         this.tempProduct.id = new Date().getTime();
         this.products.push(this.tempProduct);
-
       }
       $("#productModal").modal("hide");
       this.tempProduct = {
