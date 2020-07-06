@@ -93,6 +93,7 @@ var app = new Vue({
           maxNumber: 10,
           coupon: false,
         },
+        
       },
     ],
     tempProduct: {
