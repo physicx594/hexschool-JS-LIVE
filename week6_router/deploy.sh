@@ -1,29 +1,94 @@
-#!/usr/bin/env sh
-
-# 發生錯誤時執行終止指令
 set -e
 
-# 打包編譯
+# https://en.wikipedia.org/wiki/ANSI_escape_code
+lgreen='\033[1;32m'
+yellow='\033[1;33m'
+norm='\033[0m'
+bold='\033[1m'
+
+echo
+echo "${lgreen}=============================================================="
+echo " 一鍵部署 5 秒後開始運作 "
+echo " ＊如要停止動作請按下 CRTL + C or Control + C"
+echo "==============================================================${norm}"
+
+sleep 5s
+
+echo
+echo "${yellow}=============================================================="
+echo " 準備取得 Git 遠端 Url..."
+echo "==============================================================${norm}"
+
+sleep 1s
+originUrl=$(git config --get remote.origin.url)
+
+echo
+echo "${lgreen}=============================================================="
+echo " 目前遠端分支: ${originUrl} "
+echo "==============================================================${norm}"
+
+sleep 1s
+split=${originUrl:0:5}
+status='';
+if [ $split = 'https' ]
+then
+  status='HTTPS'
+else
+  status='SSH'
+fi
+
+echo
+echo "${lgreen}=============================================================="
+echo " 傳輸方式將採用 $status "
+echo " 目前遠端分支 URL：$originUrl "
+echo "==============================================================${norm}"
+
+sleep 5s
+
+echo
+echo "${yellow}=============================================================="
+echo " 5 秒後開始編譯 Vue Cli "
+echo " ＊如要停止動作請按下 CRTL + C or Control + C"
+echo "==============================================================${norm}"
+
+sleep 5s
 npm run build
 
-# 移動到打包資料夾下，若你有調整的話打包後的資料夾請務必調整
+echo
+echo "${lgreen}=============================================================="
+echo " 編譯完成 "
+echo "==============================================================${norm}"
+
+echo
+echo "${yellow}=============================================================="
+echo " 移動到編譯完成的資料夾 "
+echo "==============================================================${norm}"
+
 cd dist
 
-# 部署到自定義網域
-# echo 'www.example.com' > CNAME
+echo
+echo "${yellow}=============================================================="
+echo " 初始化 Git 與加入 Commit "
+echo "==============================================================${norm}"
 
 git init
-git add -A
-git commit -m 'deploy'
+git add .
+git commit -m "update `date +'%Y-%m-%d %H:%M:%S'`";
 
-# 部署到 https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+echo
+echo "${yellow}=============================================================="
+echo " 5 秒後部署檔案到遠端分支 "
+echo " ＊如要停止動作請按下 CRTL + C or Control + C"
+echo "==============================================================${norm}"
+sleep 5s
+git push -f $originUrl master:gh-pages
 
-# 部署到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
-# 以這個專案來講就要改成這樣以下這樣，下面是走 ssh 模式
-git push -f https://github.com/physicx594/hexschool-JS-LIVE/week6_router/dist.git master
-# 除此之外，也可以改走 HTTPS 模式
-# git push -f https://github.com/hsiangfeng/HexfootMusic.git master:gh-pages
+echo
+echo "${yellow}=============================================================="
+echo " 部署完成 "
+echo "==============================================================${norm}"
 
-cd -
+echo
+echo "${lgreen}=============================================================="
+echo " 一鍵部署指令結束 "
+echo "==============================================================${norm}"
