@@ -1,0 +1,158 @@
+.navbarItem {
+  width: 50%;
+}
+.navbar-dark .navbar-nav .nav-link {
+  padding: 5px 0;
+  color: rgba(255, 255, 255);
+  transition: 0.5s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #de9e36;
+  border-bottom: 1px solid #de9e36;
+}
+.shoppingCart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.content {
+  margin: 130px auto 50px auto;
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content ul li .current {
+  color: white;
+  background-color: #343a40;
+  border-left: 5px #de9e36 solid;
+}
+
+.content ul li a {
+  display: block;
+  color: #343a40;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.content ul li a:hover {
+  color: white;
+  background-color: #343a40;
+  border-left: 5px #de9e36 solid;
+}
+
+.content .productList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.content .productList .card {
+  width: 28.57143%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #c9c7c7;
+  margin: 0 1% 20px 0px;
+}
+.content .productList .card:hover {
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+}
+
+.content .productList .card figure {
+  height: 180px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.content .productList .card img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.content .productList .card img:hover {
+  -webkit-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+
+.content .productList .card .card_body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.content .productList .card .card_body .title {
+  color: #de9e36;
+  font-weight: bold;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card_body .card-subtitle {
+  font-weight: 100;
+}
+.money .origin_price {
+  text-decoration: line-through;
+  color: #c9c7c7;
+}
+.money .price {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+.card-footer {
+  background-color: white;
+}
+.card-footer .addCart:hover {
+  color: #343a40;
+  background-color: white;
+}
+
+.close {
+  position: relative;
+  right: 25px;
+}
+.close:focus {
+  outline: none;
+}
+.modal-body img {
+  width: 100%;
+  height: 280px;
+  background-position: center;
+  background-size: cover;
+}
+.modal-title {
+  text-align: center;
+  font-weight: 900;
+}
+.modal-footer {
+  justify-content: space-between;
+}
+.modal-footer .favorites {
+  margin-right: 10px;
+  color: white;
+  background-color: #ff54bb;
+}
+.table td,
+.table th {
+  vertical-align: middle;
+}
+.Checkout {
+  width: 50%;
+}
+.footer {
+  box-sizing: border-box;
+  height: 56px;
+  line-height: 28px;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+}

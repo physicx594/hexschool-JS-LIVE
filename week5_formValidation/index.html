@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FormValidation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-loading-overlay@3.3.2/dist/vue-loading.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    
+  </head>
+  <body>
+    <div  id="app" >
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark d-flex justify-content-between">
+        <a class="navbar-brand" href="#">Logo</a>
+        </button>
+          <div class="navbar-nav navbarItem d-flex justify-content-around font-weight-bold ">
+            <a class="nav-item nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">BLOG</a>
+            <a class="nav-item nav-link active" href="#">SHOP</a>
+            <a class="nav-item nav-link" href="#">ABOUT</a>
+            <a class="nav-item nav-link" href="#">CONTACT</a>
+          </div>
+        <div>
+          <i class="fas fa-user" style="font-size:16px;color:white"></i>
+          <a href="#" @click.prevent="openModal" class="shoppingCart"><i class="fas fa-shopping-cart" style="font-size:20px;color:black" ></i></a>
+          
+        </div>
+      </nav>
+      <div class=" row content">
+        <ul class="list-unstyled text-decoration-none col-2 pr-0 pl-5">
+            <li><a href="">新品上市</a></li>
+            <li><a href="" class="current">人氣商品</a></li>
+            <li><a href="">買到賺到</a></li>
+            <li><a href="" >OUTLET</a></li>
+        </ul>
+        <product :user="user"></product>
+        <products :user="user"></products>
+      </div>
+      <div class="footer">
+        <p class="m-0">圖片取自 unsplash</p> 無商業用途，僅供學習使用</p> 
+      </div>
+      <cart ref="cart" :user="user" ></cart>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-loading-overlay@3.3.2/dist/vue-loading.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vee-validate/3.3.0/vee-validate.full.min.js"></script>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/all.js" type="module"></script>
+  </body>
+</html>
+<!-- <div id="app" class="container">
+
+  <Validation-Observer v-slot="{ invalid }">
+    <form @submit.prevent="clickMe">
+      <Validation-Provider v-slot="{ errors, classes, passed }"  rules="required|email">
+        <input type="email" name="" id="email" v-model="email" class="form-control" :class="classes">
+        <span class="invalid-feedback">{{ errors[0] }}</span>
+        <span v-if="passed">沒問題</span>
+      </Validation-Provider> 
+      <button type="submit" class="btn btn-danger" :disabled="invalid">送出</button>   
+    </form>
+  </Validation-Observer>
+
+</div> -->
+

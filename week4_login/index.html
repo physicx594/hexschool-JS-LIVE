@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div id="app">
+        <form class="form-signin" @submit.prevent="signin">
+          <h1 class="h3 mb-3 ">
+            會員登入
+          </h1>
+          <div class="form-group text-left">
+            <label for="inputEmail" class="font-weight-700">帳號</label>
+            <input id="inputEmail" v-model="user.email" type="email" class="form-control" placeholder="Email address"
+              required autofocus>
+          </div>
+          <div class="form-group text-left">
+            <label for="inputPassword" >密碼</label>
+            <input id="inputPassword" v-model="user.password" type="password" class="form-control"
+              placeholder="Password" required>
+          </div>
+          <button class="btn btn-lg  "  type="submit">
+            登入
+          </button>
+        </form>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100vh;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background: url(https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) center center no-repeat;
+  background-size: cover;
+}
+form{
+  width: 300px;
+  padding: 30px 20px;
+  margin-top: 50%;
+  text-align: center;
+  color: #343A40;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255,0.9);
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
+}
+.form-control{
+  background-color: rgba(255, 255, 255,0.7);
+}
+.form-control:focus {
+  background-color: rgba(255, 255, 255,0);
+  border-color: #343A40;
+  box-shadow: none
+}
+.btn{
+  width: 100%;
+  margin-top: 24px;
+  padding: 0;
+  color: #f45b30;
+  border: 1px solid #f45b30;
+  background-color: #fff;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  border: 1px solid #f45b30;
+  background-color: #f45b30;
+  box-shadow:none
+}

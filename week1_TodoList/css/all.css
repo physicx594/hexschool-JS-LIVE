@@ -1,0 +1,163 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrapper{
+    width: 700px;
+    margin: 50px auto;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    width: 100px;
+    padding: 10px 0px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 22px;
+    color: black;
+    background-color: #E9ECEF;
+}
+.completed{
+    text-decoration: line-through
+}
+.inputText{
+    box-sizing: border-box;
+    width: 525px;
+    font-size: 16px;
+    padding: 9px;
+    margin: 0 5px;
+    border-radius: 6px;
+    border: 1px solid #E9ECEF;
+}
+.inputText::placeholder{
+    color: black;
+}
+.inputText:focus{
+    outline: #E9ECEF;
+}
+.header button{
+    width: 75px;
+    padding: 10px 0px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #7FA969;
+}
+button:hover{
+    cursor: pointer;
+}
+button:focus{
+    outline: none;
+}
+
+.content{
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+}
+.content ul{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #E9ECEF;
+    border-bottom: none;
+    border-radius: 6px;
+}
+
+.content input{
+    width: 100px;
+    margin: 0;
+}
+.content input:hover{
+    cursor: pointer;
+}
+.content li{
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 1px solid #E9ECEF;
+    padding: 10px 0;
+    position: relative;
+
+}
+
+.content li span{
+    box-sizing: border-box;
+    /* width: 525px; */
+    display: inline-block;
+    cursor: pointer;
+}
+.content li .delete{
+    position: absolute;
+    right: 25px;
+    padding: 0;
+    border: none;
+    background-color: white;
+    color: red;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 30px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #E9ECEF;
+    border-radius: 6px;
+    padding: 10px;
+}
+.clearAll{
+    font-size: 14px;
+}
+.clearAll:hover{
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(252, 122, 122);
+}
