@@ -41,8 +41,8 @@ export default {
                       <input type="text" id="unit" class="form-control"  placeholder="請輸入單位" v-model="tempProduct.unit">
                     </div>
                     <div class="form-group col">
-                      <label for="currentNumber">人數上限</label>
-                      <input type="number" class="form-control" id="currentNumber" placeholder="請輸入人數" value=0 v-model="tempProduct.options.maxNumber" v-if="tempProduct.options">
+                      <label for="quantity">數量</label>
+                      <input type="number" class="form-control" id="quantity" placeholder="請輸入數量" value=0 v-model="tempProduct.options.quantity" v-if="tempProduct.options">
                     </div>
                   </div>
                   <div class="row">

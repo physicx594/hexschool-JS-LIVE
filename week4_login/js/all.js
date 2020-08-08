@@ -57,7 +57,7 @@ var app = new Vue({
             enabled: true,
             imageUrl: [],
             options: {
-              currentNumber: 0,
+              quantity: 0,
               coupon: false,
             },
           };
@@ -87,7 +87,7 @@ var app = new Vue({
     signout() {
       document.cookie = `token=; expires=; path=/`;
       setTimeout(() => {
-        window.location = "login.html";
+        window.location = "index.html";
       }, 1000);
     },
     //開關

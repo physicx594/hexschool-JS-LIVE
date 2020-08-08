@@ -88,7 +88,7 @@
                   <i class="fas fa-angle-up text-black"></i>
                 </span>
               </th>
-              <th>人數</th>
+              <th>數量</th>
               <th>優惠卷</th>
               <th>上架</th>
               <th width="15%">編輯</th>
@@ -103,10 +103,9 @@
               <td>{{item.origin_price | money}}</td>
               <td>{{item.price | money}}</td>
               <td v-if="item.options">
-                {{item.options.currentNumber}} / {{item.options.maxNumber}}
+                {{item.options.quantity}}
               </td>
               <td v-else></td>
-
               <td v-if="item.options" >
                 <div class="box" :class="{open:item.options.coupon}" @click="state('coupon', item)">
                   <div class="circle" :class="{open:item.options.coupon}" ></div>

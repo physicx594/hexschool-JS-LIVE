@@ -32,11 +32,11 @@ echo ${osStatus} "==============================================================
 
 echo
 echo ${osStatus} "${lgreen}=============================================================="
-echo ${osStatus} " 一鍵部署 5 秒後開始運作 "
+echo ${osStatus} " 一鍵部署 3 秒後開始運作 "
 echo ${osStatus} " ＊如要停止動作請按下 CRTL + C or Control + C"
 echo ${osStatus} "==============================================================${norm}"
 
-sleep 5s
+sleep 3s
 
 echo
 echo ${osStatus} "${yellow}=============================================================="
@@ -67,15 +67,15 @@ echo ${osStatus} " 傳輸方式將採用 $status "
 echo ${osStatus} " 目前遠端分支 URL：$originUrl "
 echo ${osStatus} "==============================================================${norm}"
 
-sleep 5s
+sleep 3s
 
 echo
 echo ${osStatus} "${yellow}=============================================================="
-echo ${osStatus} " 5 秒後開始編譯 Vue Cli "
+echo ${osStatus} " 3 秒後開始編譯 Vue Cli "
 echo ${osStatus} " ＊如要停止動作請按下 CRTL + C or Control + C"
 echo ${osStatus} "==============================================================${norm}"
 
-sleep 5s
+sleep 3s
 npm run build
 
 echo
@@ -101,10 +101,10 @@ git commit -m "update `date +'%Y-%m-%d %H:%M:%S'`";
 
 echo
 echo ${osStatus} "${yellow}=============================================================="
-echo ${osStatus} " 5 秒後部署檔案到遠端分支 "
+echo ${osStatus} " 3 秒後部署檔案到遠端分支 "
 echo ${osStatus} " ＊如要停止動作請按下 CRTL + C or Control + C"
 echo ${osStatus} "==============================================================${norm}"
-sleep 5s
+sleep 3s
 git push -f $originUrl master:gh-pages
 
 echo

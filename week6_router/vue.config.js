@@ -1,6 +1,6 @@
 module.exports = {
   publicPath: './',
-  css: {
-    extract: false
-  }
+  // css: {
+  //   extract: false
+  // }
 }

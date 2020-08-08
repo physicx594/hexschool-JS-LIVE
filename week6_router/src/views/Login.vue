@@ -46,7 +46,7 @@ export default {
             })
             .catch((error) => {
             console.log(error);
-            });
+              });
         },
     getData() {
       // 取得 token 的 cookies（注意取得的時間點）
