@@ -42,7 +42,13 @@ var app = new Vue({
   },
   methods: {
     getProducts(page = 1) {
-      const api = `${this.user.apiPath}${this.user.uuid}/admin/ec/products?page=${page}`;
+      const params = {
+        page,
+        paged: '10',
+        orderBy: 'created_at, updated_at',
+        sort: 'asc' // 排序遞增
+      }
+      const api = `${this.user.apiPath}${this.user.uuid}/admin/ec/products?page=${params.page}&paged=${params.paged}`;
       axios.get(api).then((res) => {
         console.log(res);
         this.products = res.data.data;
